@@ -13,6 +13,7 @@ Public Class Form1
             AppVersion.Text = GetFileVersionInfo(Application.StartupPath & "\Gingolingoo Launcher.exe").ToString
             If UpdateVersion.Text <= AppVersion.Text Then
                 MsgBox("Kein Update verfügbar.")
+                Process.Start(Application.StartupPath & "\Gingolingoo Launcher.exe")
                 Application.Exit()
             End If
         Catch
